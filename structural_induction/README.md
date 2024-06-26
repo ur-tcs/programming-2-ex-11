@@ -241,10 +241,10 @@ So far we usually included some tests to verify your code. Now it's your turn to
 
 ### Set up a test file
 
-Your scala code files are usually located at `src/main/scala/...`. The corresponding test files then are usually located at `src/test/scala/...`. You usually name your test file the same name as the file you want to test with a "Test" attached. In our example we have the scala file `src/main/scala/examples/examples.scala`. The corresponding test file is already included `src/test/scala/examples.test`. Actually your test file is just another scala file and you can do everything in it, what you can do in a usual scala file (but of course the different location is intended to separate tests from actual program code). For each scala file of you project, you should have a separate test file. The head of your file should usually look like this:
+Your scala code files are usually located at `src/main/scala/...`. The corresponding test files then are usually located at `src/test/scala/...`. You usually name your test file the same name as the file you want to test with a "Test" attached. In our example we have the scala file `src/main/scala/examples/examples.scala`. The corresponding test file is already included `src/test/scala/examplesTest.scala`. Actually your test file is just another scala file and you can do everything in it, what you can do in a usual scala file (but of course the different location is intended to separate tests from actual program code). For each scala file of you project, you should have a separate test file. The head of your file should usually look like this:
 
 ```scala
-package examples
+package nameOfPackage
 
 import munit.*
 
@@ -253,7 +253,7 @@ class NameOfTestSet extends FunSuite {
 }
 ```
 
-Tests are grouped in a class, which you can name by your own preference. Here we used `munit` which provides tha basic scala syntax for writing tests but other libraries are possible, too. For example the test for the contextual abstraction exercise use a different library. In our case a test is declared within the class `ExampleTest` by invoking `test`, giving it a name. The test passes as long as the body does not crash by an exception. For example
+Tests are grouped in a class, which you can name by your own preference. Here we used `munit` which provides the basic scala syntax for writing tests but other libraries are possible, too. For example the tests for the contextual abstraction exercise use a different library. In our case a test is declared within the class `ExampleTest` by invoking `test`, giving it a name. The test passes as long as the body does not crash by an exception. For example
 
 ```scala
 test("example test that succeeds") {
@@ -264,7 +264,7 @@ test("example test that succeeds") {
     assert(2+4 == 6)
 }
 
-test("exampe test that fails"){
+test("example test that fails"){
   assertEquals(2+4,8)
   assert(false)
   assert(2*2 == 4)
@@ -275,7 +275,23 @@ test("exampe test that fails"){
 
 ### How to write tests properly
 
-You are quite free on what you want to test. Take for example the factorial function `tailfac` that we provided in the file `examples.scala`. You are free to test random values that you calculated by hand e.g. `assertEquals(tailfac(4), 24)`, but this may be true only by accident and it may fail on other inputs. You will never be able to check correctness for all values by testing. Therefore you should aim to test specific special cases, like the base case or what should happen on a wrong input
+You are quite free on what you want to test. Take for example the factorial function `tailfac` that we provided in the file `examples.scala`. You are free to test random values that you calculated by hand e.g. `assertEquals(tailfac(4), 24)`, but this may be true only by accident and it may fail on other inputs. You will never be able to check correctness for all values by testing. What's the problem with a test like `assertEquals(fac,tailfac)`?
+
+<details><summary> Solution</summary>
+
+This test would immediately fail with
+```
+values are not the same
+=> Obtained
+examples.ExampleTests$$Lambda$6969/0x0000000101e40840@4038e68c
+=> Diff (- obtained, + expected)
+-examples.ExampleTests$$Lambda$6969/0x0000000101e40840@4038e68c
++examples.ExampleTests$$Lambda$6970/0x0000000101e41840@1b0f3e8a
+```
+because it is comparing the references instead of the functions, the scala code of `fac` and `tailfac` is not equal. Apart from that the function problem is undecidable.
+</details>
+
+Therefore you should aim to test specific special cases, like the base case or what should happen on a wrong input
 
 ```scala
 test("pathologicalCases"){
