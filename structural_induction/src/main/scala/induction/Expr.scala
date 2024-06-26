@@ -7,6 +7,8 @@ enum Expr:
   case Sub(e1: Expr, e2: Expr)
   case Mul(e1: Expr, e2: Expr)
 
+import Expr.*
+
 def evaluate(ctx: String => BigInt, e: Expr): BigInt = e match
   case Num(value)  => value
   case Var(name)   => ctx(name)

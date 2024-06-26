@@ -2,7 +2,7 @@
 
 **Your are allowed to copy/clone/fork this repository, but not to share solutions of the exercise in any public repository or web page.**
 
-Note that this exercise is meant to be solved on paper. You do not need to add/complete any code.
+Note that except the part on writing your own tests, this exercise is meant to be solved on paper. You do not need to add/complete any code.
 
 ## Proofs on lists
 
@@ -77,6 +77,8 @@ Axioms 3-5 follow from the implementations of `foldLeft` and `add`. Axioms 6-8 e
 
 From that lemma, we can (with the help of axioms 6 and 8) derive that the implementation of `betterSum` is correct by substituting `0` for `z` in the lemma. You are not asked to do that last bit.
 
+## Proofs on Trees and other structures
+
 Now we will study structurally induction on trees. We’ll also see how to write proofs about arbitrary structurally recursive functions, not just `map`, `fold`, and other functions for which axioms were given by the problem statement.
 
 We’ll use the `Expr` type from the calculator lab as our motivating example. Recall the definition of Expr:
@@ -108,8 +110,6 @@ To reason about arithmetic in the rest of this exercise, use the following axiom
 * `CommuMul` `a * b === b * a`
 * `BoolEq` `(a == b) === true ⇔ a === b`
 * `TrueAnd` `a && b === true ⇔ ((a === true) and (b === true))`
-
-## Warm up: `mirror`
 
 Let’s warm up with a simple operation, `mirror`:
 
@@ -235,3 +235,68 @@ We can use the same induction techniques on trees that we have learnt to reason 
 
 8. Combine the previous two results to prove the soundness of constfold.
 
+## Write your own tests
+
+So far we usually included some tests to verify your code. Now it's your turn to write the tests on your own. There are many different ways how to write tests depending on what syntax you prefer and what you want to test.
+
+### Set up a test file
+
+Your scala code files are usually located at `src/main/scala/...`. The corresponding test files then are usually located at `src/test/scala/...`. You usually name your test file the same name as the file you want to test with a "Test" attached. In our example we have the scala file `src/main/scala/examples/examples.scala`. The corresponding test file is already included `src/test/scala/examples.test`. Actually your test file is just another scala file and you can do everything in it, what you can do in a usual scala file (but of course the different location is intended to separate tests from actual program code). For each scala file of you project, you should have a separate test file. The head of your file should usually look like this:
+
+```scala
+package examples
+
+import munit.*
+
+class NameOfTestSet extends FunSuite {
+  //Here is what you want to test
+}
+```
+
+Tests are grouped in a class, which you can name by your own preference. Here we used `munit` which provides tha basic scala syntax for writing tests but other libraries are possible, too. For example the test for the contextual abstraction exercise use a different library. In our case a test is declared within the class `ExampleTest` by invoking `test`, giving it a name. The test passes as long as the body does not crash by an exception. For example
+
+```scala
+test("example test that succeeds") {
+    val obtained = 42
+    val expected = 42
+    assertEquals(obtained, expected)
+    assert(true)
+    assert(2+4 == 6)
+}
+
+test("exampe test that fails"){
+  assertEquals(2+4,8)
+  assert(false)
+  assert(2*2 == 4)
+}
+```
+
+"example test that fails" fails in the first line of the body, the rest of the test is not checked after the crash, even though `assert(2*2==4)` would pass. We can run the tests by `test` in `sbt` or if you don't want to test everything you may use `testOnly` followed by the name of the package and the class of tests you would like to run, e.g. `testOnly examples.SucceedFailTest`.
+
+### How to write tests properly
+
+You are quite free on what you want to test. Take for example the factorial function `tailfac` that we provided in the file `examples.scala`. You are free to test random values that you calculated by hand e.g. `assertEquals(tailfac(4), 24)`, but this may be true only by accident and it may fail on other inputs. You will never be able to check correctness for all values by testing. Therefore you should aim to test specific special cases, like the base case or what should happen on a wrong input
+
+```scala
+test("pathologicalCases"){
+  assertEquals(tailfac(1),1)
+  assertEquals(tailfac(0),1)
+  assertEquals(tailfac(-1),1)
+}
+```
+
+Your tests should always be according to your program: The value that we expect from `tailfac(-1)` depends on our definition of `tailfac`. To test several inputs at once you can simply use scala code to construct those.
+
+```scala
+  test("samples"){
+  def fac(n: Int): Int = 
+    if n <= 1 then 1 else n*fac(n-1)
+  for i <- 1 to 10 yield assertEquals(tailfac(i),fac(i))
+  }
+```
+
+Ensure that your tests cover both expected success cases and potential failure cases.
+
+### Write your own tests
+
+Now it's your turn. Make a test file and write appropriate tests for the functions in the `Expr.scala` file. As mentioned above there is no right or wrong, it depends on what specifications of the functions you would like to test.

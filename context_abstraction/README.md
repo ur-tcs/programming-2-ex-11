@@ -222,46 +222,6 @@ val e3 = Let("x", Let("y", Num(1), Add(Var("y"), Var("y"))), Mul(Var("x"), Var("
 evaluate(e3)
 ```
 
-## Implicit Wire Format
-
-In the webapp exercise next week, we are using type class `WireFormat[T]` to represent encoding and decoding between JSON and a data type `T`.
-
-In the original implementation, the type classes for different data types are defined as regular classes, which means, to use the instance of a type, we have to construct its format manually at every place.
-
-In this exercise, your task is to use contextual abstractions to define instances of the type class `WireFormat`. They are defined in ?webapp/lib/shared/shared/src/main/scala/wires/Wires.scala?.
-
-First, you need to define the general encode and decode functions for wires at the top of the file:
-
-```scala
-def encodeWire[T](t: T)(using wt: WireFormat[T]): ujson.Value =
-  ???
-
-def decodeWire[T](js: ujson.Value)(using wt: WireFormat[T]): Try[T] =
-  ???
-```
-
-With these two functions, you can call encode and decode functions without naming the using parameters.
-
-Then, you need to modify the different instances of `WireFormat`. For example, the `WireFormat[Boolean]` was defined as:
-
-```scala
-object OldBooleanWire extends WireFormat[Boolean]:
-  def encode(t: Boolean): Value = Bool(t)
-  def decode(js: Value): Try[Boolean] = Try(js.bool)
-```
-
-It can be transformed to:
-
-```scala
-given WireFormat[Boolean] with
-  def encode(t: Boolean): Value = Bool(t)
-  def decode(js: Value): Try[Boolean] = Try(js.bool)
-```
-
-If you encounter any ambiguity error (this may happen when using `decodeWire` in a complex expression), you can specify the type argument explicitly. Try not to use `summon` to get the instance of a type class explcitly.
-
-See [Importing Givens](https://docs.scala-lang.org/scala3/reference/contextual/given-imports.html) for details about how to import given instances.
-
 ## Acknowledgement
 
 The monoid exercise is adapted from the documentation of the [Cats](https://typelevel.org/cats/typeclasses/monoid.html) library.
