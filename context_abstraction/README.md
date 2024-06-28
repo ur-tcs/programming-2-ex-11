@@ -63,7 +63,7 @@ given pairOrdering[A, B]: Ordering[(A, B)] with
   def compare(x: (A, B), y: (A, B)): Int = ???
 ```
 
-Example use case: Consider a program for managing an address book. We would like to sort the addresses by zip codes first and then by street name. Two addresses with different zip codes are ordered according to their zip code, otherwise (when the zip codes are the same) the addresses are sorted by street name. E.g.
+Example use case: Consider a program for managing an address book (implemented in the worksheet). We would like to sort the addresses by zip codes first and then by street name. Two addresses with different zip codes are ordered according to their zip code, otherwise (when the zip codes are the same) the addresses are sorted by street name. E.g.
 
 ```scala
 type Address = (Int, String) 
@@ -179,7 +179,7 @@ Your task is to implement a `Monoid` instance for `Option[A]` given a `SemiGroup
 given [A: SemiGroup]: Monoid[Option[A]] = ??? // you can modify `=` to `with`
 ```
 
-With the `Monoid` instance for `Option[A]`, we can lift a list of `BigInt` to a list of `Option[BigInt]` and then apply the general `reduce` function to it to find the minimum element.
+With the `Monoid` instance for `Option[A]`, we can lift a list of `BigInt` to a list of `Option[BigInt]` and then apply the general `reduce` function to it to find the minimum element (the code can be found in the worksheet).
 
 ```scala
 val bigints = List(BigInt(-8), BigInt(2), BigInt(0), BigInt(4), BigInt(100))

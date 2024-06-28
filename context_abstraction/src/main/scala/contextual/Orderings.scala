@@ -16,9 +16,9 @@ object Orderings:
   def consistent[T](x: T, y: T, z: T)(using ord: Ordering[T]): Boolean =
     ord.compare(x, y) != 0 || sign(ord.compare(x, z)) == sign(ord.compare(y, z))
 
-// TODO: you should modify this signature according to the requirements
-given pairOrdering[A, B]: Ordering[(A, B)] with
-  def compare(x: (A, B), y: (A, B)): Int = ???
+  // TODO: you should modify this signature according to the requirements
+  given pairOrdering[A, B]: Ordering[(A, B)] with
+    def compare(x: (A, B), y: (A, B)): Int = ???
 
   case class Student(name: String, year: Int)
 

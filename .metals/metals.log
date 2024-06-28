@@ -1,0 +1,82 @@
+2024.06.28 10:35:29 INFO  Started: Metals version 1.3.2 in folders 'C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11' for client Visual Studio Code 1.90.2.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@46d41f55]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@34b39136]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@46d41f55]
+2024.06.28 10:35:29 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.06.28 10:35:30 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\src\main\scala\contextual\Orderings.scala. Using presentation compiler with project's scala-library version: 3.3.3
+Juni 28, 2024 10:35:31 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 2
+2024.06.28 10:35:31 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\src\main\scala\contextual\Orderings.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:35:34 INFO  running 'C:\Users\LocalAdmin\AppData\Local\Coursier\cache\arc\https\github.com\adoptium\temurin11-binaries\releases\download\jdk-11.0.23%252B9\OpenJDK11U-jdk_x64_windows_hotspot_11.0.23_9.zip\jdk-11.0.23+9\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\LOCALA~1\AppData\Local\Temp\metals9714007660674733363\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2024.06.28 10:35:34 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\src\main\scala\contextual\Orderings.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:35:34 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\src\main\scala\contextual\Orderings.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:35:37 INFO  [info] welcome to sbt 1.10.0 (Eclipse Adoptium Java 11.0.23)
+2024.06.28 10:35:39 INFO  [info] loading settings for project context_abstraction-build-build from metals.sbt ...
+2024.06.28 10:35:39 INFO  [info] loading project definition from C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\project\project
+2024.06.28 10:35:42 INFO  [info] loading settings for project context_abstraction-build from metals.sbt ...
+2024.06.28 10:35:42 INFO  [info] loading project definition from C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\project
+2024.06.28 10:35:46 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\src\main\scala\contextual\Orderings.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:35:46 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:35:48 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:35:48 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:35:49 INFO  [success] Generated .bloop\context_abstraction-build.json
+2024.06.28 10:35:49 INFO  [success] Total time: 6 s, completed 28.06.2024, 10:35:49
+2024.06.28 10:35:49 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:35:50 INFO  [info] loading settings for project root from build.sbt ...
+2024.06.28 10:35:50 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:35:50 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:35:50 INFO  [info] set current project to context_abstraction (in build file:/C:/Users/LocalAdmin/OneDrive/Dokumente/Uni/Programmieren_II/ForStudents/programming-2-ex-11/context_abstraction/)
+2024.06.28 10:35:50 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:35:51 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:35:52 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:35:52 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:35:52 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:35:52 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:35:53 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:35:53 INFO  [success] Generated .bloop\root-test.json
+2024.06.28 10:35:53 INFO  [success] Generated .bloop\root.json
+2024.06.28 10:35:53 INFO  [success] Total time: 2 s, completed 28.06.2024, 10:35:53
+2024.06.28 10:35:53 INFO  time: ran 'sbt bloopInstall' in 19s
+2024.06.28 10:35:53 INFO  Attempting to connect to the build server...
+2024.06.28 10:35:53 INFO  Setting up current java home C:\Users\LocalAdmin\AppData\Local\Coursier\cache\arc\https\github.com\adoptium\temurin17-binaries\releases\download\jdk-17%252B35\OpenJDK17-jdk_x64_windows_hotspot_17_35.zip\jdk-17+35 in C:\Users\LocalAdmin\.bloop\bloop.json
+2024.06.28 10:35:54 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:35:54 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:35:57 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:35:57 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:35:58 WARN  no build target for: C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt
+2024.06.28 10:35:58 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:35:58 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:36:04 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\.metals\bsp.trace.json or C:\Users\LocalAdmin\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.06.28 10:36:06 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:36:08 INFO  time: Connected to build server in 15s
+2024.06.28 10:36:08 INFO  Connected to Build server: Bloop v1.5.18
+2024.06.28 10:36:08 INFO  time: Imported build in 0.2s
+2024.06.28 10:36:15 INFO  time: indexed workspace in 6.37s
+2024.06.28 10:36:15 WARN  no build target for: C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt
+2024.06.28 10:36:15 INFO  compiling root (3 scala sources)
+2024.06.28 10:36:20 INFO  compiling root-test (3 scala sources)
+2024.06.28 10:36:20 INFO  time: compiled root in 5.61s
+2024.06.28 10:36:21 INFO  time: compiled root-test in 1.2s
+2024.06.28 10:36:21 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:37:19 INFO  time: evaluated worksheet 'playground.worksheet.sc' in 8.66s
+2024.06.28 10:37:52 INFO  time: evaluated worksheet 'playground.worksheet.sc' in 2.06s
+Juni 28, 2024 10:37:52 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 99
+2024.06.28 10:47:03 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\.metals\bsp.trace.json or C:\Users\LocalAdmin\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.06.28 10:47:03 INFO  Connected to Build server: Bloop v1.5.18
+2024.06.28 10:47:06 INFO  time: indexed workspace in 3.58s
+2024.06.28 10:47:06 WARN  no build target for: C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt
+2024.06.28 10:47:07 INFO  compiling root (3 scala sources)
+2024.06.28 10:47:08 INFO  compiling root-test (3 scala sources)
+2024.06.28 10:47:08 INFO  time: compiled root in 1.49s
+2024.06.28 10:47:08 INFO  time: compiled root-test in 0.82s
+2024.06.28 10:47:10 INFO  time: evaluated worksheet 'playground.worksheet.sc' in 1.29s
+2024.06.28 10:55:39 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\.metals\bsp.trace.json or C:\Users\LocalAdmin\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.06.28 10:55:39 INFO  Connected to Build server: Bloop v1.5.18
+2024.06.28 10:55:41 INFO  time: indexed workspace in 1.36s
+2024.06.28 10:55:41 WARN  no build target for: C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt
+2024.06.28 10:55:41 INFO  compiling root-test (3 scala sources)
+2024.06.28 10:55:41 INFO  time: compiled root-test in 0.86s
+2024.06.28 10:55:43 INFO  time: evaluated worksheet 'playground.worksheet.sc' in 1.25s
