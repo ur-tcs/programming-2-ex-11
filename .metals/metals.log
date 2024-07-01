@@ -80,3 +80,10 @@ WARNUNG: Unmatched cancel notification for request id 99
 2024.06.28 10:55:41 INFO  compiling root-test (3 scala sources)
 2024.06.28 10:55:41 INFO  time: compiled root-test in 0.86s
 2024.06.28 10:55:43 INFO  time: evaluated worksheet 'playground.worksheet.sc' in 1.25s
+2024.06.28 10:56:44 INFO  no build target found for C:\Users\LocalAdmin\OneDrive\Dokumente\Uni\Programmieren_II\ForStudents\programming-2-ex-11\context_abstraction\build.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.06.28 10:56:47 INFO  time: evaluated worksheet 'playground.worksheet.sc' in 1.6s
+2024.06.28 10:56:48 INFO  time: code lens generation in 1.93s
+2024.06.28 10:59:44 INFO  Shutting down server
+2024.06.28 10:59:44 INFO  shutting down Metals
+2024.06.28 10:59:44 INFO  Shut down connection with build server.
+2024.06.28 10:59:44 INFO  Exiting server
