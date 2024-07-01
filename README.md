@@ -1,4 +1,4 @@
-# programming-2-ex-11
+# Type classes, context abstraction, structural induction
 
 **Your are allowed to copy/clone/fork this repository, but not to share solutions of the exercise in any public repository or web page.**
 
