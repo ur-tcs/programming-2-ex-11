@@ -2,8 +2,6 @@
 
 Exercises marked with ⭐️ are the most important ones. Exercises marked with 🔥 are the most challenging ones. You do not need to complete all exercises to succeed in this class, and you do not need to do all exercises in the order they are written.
 
-**Your are allowed to copy/clone/fork this repository, but not to share solutions of the exercise in any public repository or web page.**
-
 ## Testing
 
 To test your code, run `sbt test` in the root directory of the project. We are using [ScalaCheck](https://scalacheck.org/) for automated property-based testing. ScalaCheck is inspired by Haskell’s [QuickCheck](https://hackage.haskell.org/package/QuickCheck).
@@ -111,7 +109,7 @@ given studentOrdering2: Ordering[Student] = orderingBy((s: Student) => (s.year, 
 
 The skeleton for this part can be found in src/main/scala/contextual/Algebra.scala.
 
-Recall the `SemiGroup` and `Monoid` type classes from the lecture:
+Recall the notions of semi-groups and monoids from your math lectures. `SemiGroup` and `Monoid` can be defined as type classes:
 
 ```scala
 trait SemiGroup[A]:
