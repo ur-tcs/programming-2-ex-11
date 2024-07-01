@@ -1,7 +1,5 @@
 # Structural Induction
 
-**Your are allowed to copy/clone/fork this repository, but not to share solutions of the exercise in any public repository or web page.**
-
 Note that except the part on writing your own tests, this exercise is meant to be solved on paper. You do not need to add/complete any code.
 
 ## Proofs on lists
